@@ -132,7 +132,7 @@ async def handle_private_message(update: Update, context: ContextTypes.DEFAULT_T
             # ستيكر وفيديو دائري ما يقبل تعديل، نبعت رسالة صغيرة بالأزرار فقط
             await context.bot.send_message(
                 chat_id=ADMIN_GROUP_ID,
-                text="👆",
+                text=".",
                 reply_markup=keyboard
             )
 
