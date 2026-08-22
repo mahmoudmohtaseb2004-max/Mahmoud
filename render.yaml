@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: admin-inbox-bot
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_GROUP_ID
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: FLOOD_WINDOW_SECONDS
+        value: "2.5"
+      - key: MAX_MESSAGES_PER_MINUTE
+        value: "5"
+      - key: TEMP_BAN_MINUTES
+        value: "10"
+      - key: ADMIN_CACHE_TTL_SECONDS
+        value: "300"
+      - key: MAPPING_MAX_AGE_DAYS
+        value: "7"
+      - key: CLEANUP_INTERVAL_SECONDS
+        value: "3600"
+      - key: MEDIA_GROUP_FLUSH_DELAY
+        value: "1.2"
+      - key: LOG_LEVEL
+        value: "INFO"
